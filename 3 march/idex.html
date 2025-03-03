@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Ex 1</title>
+</head>
+<body>
+    
+
+        <h1 style="color: rgb(255, 0, 34);"> JS Example 2</h1>
+    
+        <div>
+        <label for="txt1">Value1</label>
+        <input type="text"id="val1" value="" name="val1" placeholder="Enter number"></div>
+        <div>
+            <label for="txt2">Value2</label>
+            <input type="text"id="val2" value="" name="val2" placeholder="Enter number"></div>
+        <div><button onclick="getResult()">submit </button></div> 
+
+        <h1 style="color: rgb(255, 174, 0);" id="flnumber"></h1>
+
+   
+    <script>
+        
+
+        function getResult(){
+            
+            var val1 =document.getElementById('val1').value;
+            var val2 =document.getElementById('val2').value;
+            var result;
+
+            if(!isNaN(val1) && !isNaN(val2)){
+                result=parseFloat(val1)+parseFloat(val2);
+            }else{
+                result= val1+val2;
+            }
+            
+            
+             document.getElementById('flnumber').innerHTML = result;
+        }
+    </script>
+    
+</body>
+</html>
